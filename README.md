@@ -61,11 +61,7 @@ Antes de começar, você precisa ter instalado em sua máquina:
 
 `http://localhost:5173`
 
-
 ---
-
-# ✅ PARTE 4 — ROTAS + API
-
 
 ## 🧩 Rotas da aplicação
 
@@ -125,12 +121,9 @@ Pokedex
 ├── vite.config.js
 └── netlify.toml
 
-
+```md
 ---
 
-# ✅ PARTE 6 — FLUXO DA APLICAÇÃO
-
-```md
 ### Fluxo da aplicação
 
 ```text
@@ -151,11 +144,6 @@ PokemonDetails.jsx
 api.js (requisições para a PokeAPI)
    ↓
 Exibição dos dados detalhados
-
-
----
-
-# ✅ PARTE 7 — PRINTS
 
 ```md
 ---
