@@ -4,21 +4,21 @@ Aplicação web desenvolvida em **React** que consome a **PokeAPI** para listar 
 
 ---
 
-## 🔗 Acesse a aplicação online
+## Acesse a aplicação online
 
 **Link do site:**  
 https://pokedex-miguel2026.netlify.app/
 
 ---
 
-## 📌 Sobre o projeto
+## Sobre o projeto
 
 A **Pokedex** é uma aplicação desenvolvida para explorar Pokémon de forma simples e intuitiva.  
 O projeto consome dados da **PokeAPI**, permitindo visualizar uma listagem inicial, buscar Pokémon por nome e acessar uma página de detalhes para cada Pokémon através de rotas dinâmicas.
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - Listagem inicial de Pokémon consumindo API externa
 - Busca por nome
@@ -29,7 +29,7 @@ O projeto consome dados da **PokeAPI**, permitindo visualizar uma listagem inici
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - **React**
 - **Vite**
@@ -41,9 +41,10 @@ O projeto consome dados da **PokeAPI**, permitindo visualizar uma listagem inici
 
 ---
 
-## ▶️ Como executar o projeto localmente
+## Como executar o projeto localmente
 
 ### Pré-requisitos
+
 Antes de começar, você precisa ter instalado em sua máquina:
 
 - **Node.js**
@@ -51,27 +52,45 @@ Antes de começar, você precisa ter instalado em sua máquina:
 
 ### Instalar dependências
 
-`npm install`
+```bash
+npm install
+```
 
 ### Rodar em ambiente de desenvolvimento
 
-`npm run dev`
+```bash
+npm run dev
+```
 
-### Depois disso, abra no navegador o endereço informado pelo Vite, normalmente:
+Depois disso, abra no navegador o endereço informado pelo Vite, normalmente:
 
-`http://localhost:5173`
+```bash
+http://localhost:5173
+```
+
+### Gerar build de produção
+
+```bash
+npm run build
+```
+
+### Visualizar build localmente
+
+```bash
+npm run preview
+```
 
 ---
 
-## 🧩 Rotas da aplicação
+## Rotas da aplicação
 
-- `/` → Página inicial com listagem e busca
-- `/pokemon/:name` → Página de detalhes do Pokémon
-- `*` → Página de erro / não encontrada
+- `/` -> Página inicial com listagem e busca
+- `/pokemon/:name` -> Página de detalhes do Pokémon
+- `*` -> Página de erro / não encontrada
 
 ---
 
-## 🌐 API utilizada
+## API utilizada
 
 A aplicação utiliza a **PokeAPI** para consumir os dados dos Pokémon.
 
@@ -81,74 +100,82 @@ A aplicação utiliza a **PokeAPI** para consumir os dados dos Pokémon.
 - **Buscar detalhes por nome:**  
   `https://pokeapi.co/api/v2/pokemon/:name`
 
-  ---
+---
 
-## 🏗️ Desenho da arquitetura da aplicação
+## Desenho da arquitetura da aplicação
+
+Estrutura principal dos arquivos ativos da aplicação:
 
 ```text
 Pokedex
-│
-├── src
-│   ├── components
-│   │   ├── AppLayout.jsx
-│   │   ├── PokemonCard.jsx
-│   │   └── SearchInput.jsx
-│   │
-│   ├── pages
-│   │   ├── Home.jsx
-│   │   ├── PokemonDetails.jsx
-│   │   └── NotFoundPage.jsx
-│   │
-│   ├── routes
-│   │   └── index.jsx
-│   │
-│   ├── services
-│   │   └── api.js
-│   │
-│   ├── styles
-│   │   └── global.css
-│   │
-│   ├── App.jsx
-│   └── main.jsx
-│
-├── screenshots
-│   ├── home.png
-│   ├── search.png
-│   └── details.png
-│
-├── index.html
-├── package.json
-├── vite.config.js
-└── netlify.toml
-
+|
+|-- src
+|   |-- components
+|   |   |-- AppLayout.jsx
+|   |   |-- PokemonCard.jsx
+|   |   `-- SearchInput.jsx
+|   |
+|   |-- pages
+|   |   |-- Home.jsx
+|   |   |-- NotFoundPage.jsx
+|   |   `-- PokemonDetails.jsx
+|   |
+|   |-- routes
+|   |   `-- index.jsx
+|   |
+|   |-- screenshots
+|   |   |-- details.png
+|   |   |-- home.png
+|   |   `-- search.png
+|   |
+|   |-- services
+|   |   `-- api.js
+|   |
+|   |-- styles
+|   |   `-- global.css
+|   |
+|   |-- App.jsx
+|   `-- main.jsx
+|
+|-- index.html
+|-- package.json
+|-- vite.config.js
+`-- netlify.toml
 ```
----
 
 ### Fluxo da aplicação
 
 ```text
 Usuário
-   ↓
+   |
+   v
 Home.jsx
-   ↓
-SearchInput.jsx → busca Pokémon por nome
-   ↓
-PokemonCard.jsx → exibe cards da listagem
-   ↓
+   |
+   v
+SearchInput.jsx -> busca Pokémon por nome
+   |
+   v
+PokemonCard.jsx -> exibe cards da listagem
+   |
+   v
 Clique em um Pokémon
-   ↓
+   |
+   v
 React Router DOM
-   ↓
+   |
+   v
 PokemonDetails.jsx
-   ↓
-api.js (requisições para a PokeAPI)
-   ↓
+   |
+   v
+api.js -> requisições para a PokeAPI
+   |
+   v
 Exibição dos dados detalhados
-
 ```
+
 ---
 
-## 📸 Prints da aplicação
+## Prints da aplicação
 
 ### Tela inicial
 ![Tela inicial](./src/screenshots/home.png)
@@ -161,21 +188,21 @@ Exibição dos dados detalhados
 
 ---
 
-## 📂 Estrutura principal do projeto
+## Estrutura principal do projeto
 
-- `src/components/AppLayout.jsx` → Estrutura base da aplicação
-- `src/components/PokemonCard.jsx` → Card reutilizável de Pokémon
-- `src/components/SearchInput.jsx` → Campo de busca com preview
-- `src/pages/Home.jsx` → Página principal com listagem e busca
-- `src/pages/PokemonDetails.jsx` → Página de detalhes do Pokémon
-- `src/pages/NotFoundPage.jsx` → Página para rotas inválidas
-- `src/routes/index.jsx` → Configuração das rotas
-- `src/services/api.js` → Funções de consumo da API
-- `src/styles/global.css` → Estilos globais
+- `src/components/AppLayout.jsx` -> Estrutura base da aplicação
+- `src/components/PokemonCard.jsx` -> Card reutilizável de Pokémon
+- `src/components/SearchInput.jsx` -> Campo de busca com preview
+- `src/pages/Home.jsx` -> Página principal com listagem e busca
+- `src/pages/PokemonDetails.jsx` -> Página de detalhes do Pokémon
+- `src/pages/NotFoundPage.jsx` -> Página para rotas inválidas
+- `src/routes/index.jsx` -> Configuração das rotas
+- `src/services/api.js` -> Funções de consumo da API
+- `src/styles/global.css` -> Estilos globais
 
 ---
 
-## 🚀 Deploy
+## Deploy
 
 A aplicação foi publicada utilizando **Netlify**.
 
@@ -184,6 +211,6 @@ https://pokedex-miguel2026.netlify.app/
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 Projeto desenvolvido por **Miguel Taveira** para atividade individual da disciplina.
