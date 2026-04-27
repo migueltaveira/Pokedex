@@ -121,7 +121,7 @@ Pokedex
 ├── vite.config.js
 └── netlify.toml
 
-```md
+```
 ---
 
 ### Fluxo da aplicação
@@ -145,7 +145,7 @@ api.js (requisições para a PokeAPI)
    ↓
 Exibição dos dados detalhados
 
-```md
+```
 ---
 
 ## 📸 Prints da aplicação
