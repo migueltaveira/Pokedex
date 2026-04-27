@@ -57,6 +57,37 @@ npm run build
 npm run preview
 ```
 
+## Deploy na Netlify
+
+Este projeto ja esta preparado para deploy na Netlify com o arquivo:
+
+- [netlify.toml](./netlify.toml)
+
+Ele define:
+
+- comando de build: `npm run build`
+- pasta publicada: `dist`
+- redirect para `index.html`, necessario para o React Router funcionar nas rotas dinamicas
+
+### Como publicar
+
+1. Envie o projeto para um repositorio no GitHub.
+2. Acesse a Netlify.
+3. Clique em `Add new site` e depois em `Import an existing project`.
+4. Conecte seu repositorio.
+5. Confirme estas configuracoes:
+
+```text
+Build command: npm run build
+Publish directory: dist
+```
+
+6. Finalize o deploy.
+
+### Observacao importante
+
+Como a aplicacao usa rota dinamica, por exemplo `/pokemon/pikachu`, o redirect da Netlify e necessario para evitar erro `Page not found` ao atualizar a pagina diretamente no navegador.
+
 ## Estrutura do projeto
 
 ```text
