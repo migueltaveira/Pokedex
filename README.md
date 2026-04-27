@@ -145,33 +145,7 @@ Pokedex
 
 ### Fluxo da aplicação
 
-```text
-Usuário
-   |
-   v
-Home.jsx
-   |
-   v
-SearchInput.jsx -> busca Pokémon por nome
-   |
-   v
-PokemonCard.jsx -> exibe cards da listagem
-   |
-   v
-Clique em um Pokémon
-   |
-   v
-React Router DOM
-   |
-   v
-PokemonDetails.jsx
-   |
-   v
-api.js -> requisições para a PokeAPI
-   |
-   v
-Exibição dos dados detalhados
-```
+![Fluxo de aplicação](./src/screenshots/fluxo_app.png)
 
 ---
 
