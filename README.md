@@ -151,13 +151,13 @@ Exibição dos dados detalhados
 ## 📸 Prints da aplicação
 
 ### Tela inicial
-![Tela inicial](./screenshots/home.png)
+![Tela inicial](./src/screenshots/home.png)
 
 ### Tela de busca
-![Tela de busca](./screenshots/search.png)
+![Tela de busca](./src/screenshots/search.png)
 
 ### Tela de detalhes
-![Tela de detalhes](./screenshots/details.png)
+![Tela de detalhes](./src/screenshots/details.png)
 
 ---
 
